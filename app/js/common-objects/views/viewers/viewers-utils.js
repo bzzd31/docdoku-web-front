@@ -25,12 +25,12 @@ define([], function () {
     }
 
     function getFileName(url) {
-        return url.substr(url.lastIndexOf('/') + 1).toLowerCase();
+        return url.substr(url.lastIndexOf('/') + 1);
     }
 
     function getExtension(url) {
         var fileName = getFileName(url);
-        return fileName.substr(fileName.lastIndexOf('.') + 1).toLowerCase();
+        return fileName.substr(fileName.lastIndexOf('.') + 1);
     }
 
     function generateViewerHash() {
