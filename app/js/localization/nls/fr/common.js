@@ -270,6 +270,7 @@ define({
     HEAD_CHECKIN: 'Derniers libérés',
     HEAD_RELEASED: 'Derniers finalisés',
     HEAD_WIP: 'Travail en cours',
+    HIERARCHY: 'Hiérarchie',
     HIDE_SUBSTITUTES: 'Masquer les variantes',
     HOME_PAGE: 'Accueil',
     HOURS: 'h',

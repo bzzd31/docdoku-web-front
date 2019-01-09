@@ -262,6 +262,7 @@ define({
     HEAD_CHECKIN: 'Последняя регистрация',
     HEAD_RELEASED: 'Последний релиз',
     HEAD_WIP: 'В работе',
+    HIERARCHY: 'иерархия',
     HIDE_SUBSTITUTES: 'Скрыть заменитель',
     HOME_PAGE: 'Домой',
     HOURS: 'ч',

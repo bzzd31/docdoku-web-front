@@ -4,6 +4,7 @@ define(['common-objects/utils/date'], function (date) {
     'use strict';
 
     var columnNameMapping = {
+        'pr.hierarchy': App.config.i18n.HIERARCHY,
         'pr.number': App.config.i18n.PART_NUMBER,
         'pr.version': App.config.i18n.VERSION,
         'pr.iteration': App.config.i18n.ITERATION,
@@ -20,15 +21,15 @@ define(['common-objects/utils/date'], function (date) {
     var numberFields = ['pr.iteration'];
 
     var optgroups = [
-        {id: 'pr', name: App.config.i18n.QUERY_GROUP_PART_REVISION},
-        {id: 'attr-TEXT', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_STRING},
-        {id: 'attr-LONG_TEXT', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_LONG_STRING},
-        {id: 'attr-PART_NUMBER', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_PART_NUMBER},
-        {id: 'attr-URL', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_URL},
-        {id: 'attr-LOV', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_LOV},
-        {id: 'attr-NUMBER', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_NUMBER},
-        {id: 'attr-DATE', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_DATE},
-        {id: 'attr-BOOLEAN', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_BOOLEAN},
+        { id: 'pr', name: App.config.i18n.QUERY_GROUP_PART_REVISION },
+        { id: 'attr-TEXT', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_STRING },
+        { id: 'attr-LONG_TEXT', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_LONG_STRING },
+        { id: 'attr-PART_NUMBER', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_PART_NUMBER },
+        { id: 'attr-URL', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_URL },
+        { id: 'attr-LOV', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_LOV },
+        { id: 'attr-NUMBER', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_NUMBER },
+        { id: 'attr-DATE', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_DATE },
+        { id: 'attr-BOOLEAN', name: App.config.i18n.QUERY_GROUP_ATTRIBUTE_BOOLEAN },
     ];
 
     var formatAttribute = function (attr) {
@@ -86,13 +87,13 @@ define(['common-objects/utils/date'], function (date) {
             return '<td><span>' + model.getVersion() + '</span></td>';
         },
         'pr.iteration': function (model) {
-            return '<td><span>' + ( model.getLastIteration() ? model.getLastIteration().id : '-') + '</span></td>';
+            return '<td><span>' + (model.getLastIteration() ? model.getLastIteration().id : '-') + '</span></td>';
         },
         'pr.type': function (model) {
             return '<td><span>' + (model.getType() || '-') + '</span></td>';
         },
         'pr.name': function (model) {
-            return '<td><span>' + ( model.getName() || '-') + '</span></td>';
+            return '<td><span>' + (model.getName() || '-') + '</span></td>';
         },
         'pr.author': function (model) {
             return '<td><a class="author-popover">' + (model.getAuthorName() || '-') + '</a></td>';
@@ -101,7 +102,7 @@ define(['common-objects/utils/date'], function (date) {
             return '<td><a class="date-popover">' + model.getFormattedModificationDate() + '</a></td>';
         },
         'pr.lifecycleSate': function (model) {
-            return '<td><span>' + ( model.getLifeCycleState() || '-') + '</span></td>';
+            return '<td><span>' + (model.getLifeCycleState() || '-') + '</span></td>';
         },
         'pr.checkoutUser': function (model) {
             return '<td><a class="checkout-user-popover">' + (model.getCheckOutUserName() || '-') + '</a></td>';
@@ -127,7 +128,7 @@ define(['common-objects/utils/date'], function (date) {
         }
     };
 
-    var defaultColumns = ['pr.number', 'pr.version',
+    var defaultColumns = ['pr.hierarchy', 'pr.number', 'pr.version',
         'pr.iteration', 'pr.type', 'pr.name', 'pr.author',
         'pr.modificationDate', 'pr.lifecycleSate', 'pr.checkoutUser', 'pr.acl'
     ];
